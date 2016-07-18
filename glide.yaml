@@ -1,0 +1,3 @@
+package: github.com/flourish-ship/work-attendance
+import:
+- package: github.com/kataras/iris
