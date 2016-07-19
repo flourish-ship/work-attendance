@@ -7,7 +7,7 @@ import (
 func main() {
 
 	iris.Get("/hi", func(ctx *iris.Context) {
-		ctx.Write("Hi %s", " test")
+		ctx.Write("Hi.. %s", " test")
 	})
 	iris.Listen(":5000")
 }
