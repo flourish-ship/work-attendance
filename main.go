@@ -1,12 +1,11 @@
 package main
 
 import (
-	"github.com/flourish-ship/work-attendance/api"
+	_ "github.com/flourish-ship/work-attendance/routers"
 	"github.com/kataras/iris"
 )
 
 func main() {
-	iris.API("/users", api.UserApi{})
 
 	iris.Listen(":3000")
 }
