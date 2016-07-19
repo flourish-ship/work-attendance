@@ -1,0 +1,16 @@
+build:
+  image: golang:1.6.3-alpine
+  commands:
+    - glide install
+    - go build
+    #- go test
+
+publish:
+  docker:
+   registry: registry.sunwen.in
+   username: $$USERNAME
+   password: $$PASSWORD
+   email: $$EMAIL
+   repo: flourish-ship/work-attendance
+   tag: $$BRANCH($$COMMIT)
+   insecure: false
