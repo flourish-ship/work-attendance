@@ -1,11 +1,9 @@
 package main
 
 import (
-	_ "github.com/flourish-ship/work-attendance/routers"
-	"github.com/kataras/iris"
+	"github.com/flourish-ship/work-attendance/routers"
 )
 
 func main() {
-
-	iris.Listen(":3000")
+	routers.Routers().Listen(":3000")
 }
