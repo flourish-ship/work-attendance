@@ -1,5 +1,6 @@
 build:
-  image: golang
-  commands:
+ image: golang:1.6.3-alpine
+ commands:
     - go get
     - go build
+    - go test
