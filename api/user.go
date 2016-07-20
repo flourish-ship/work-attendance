@@ -12,6 +12,6 @@ type UserApi struct {
 // GET /users
 func (u UserApi) Get() {
 	//u.Write("Get from /users")
-	user := model.User{UserName: "mojo-zd", Gender: "male"}
+	user := model.User{UserName: "mojo-zd", Gender: "male", NickName: "mojo"}
 	u.JSON(iris.StatusOK, user)
 }
