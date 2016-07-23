@@ -21,8 +21,8 @@ type User struct {
 
 func (self *User) GetMgoInfo() (string, string, string) {
 
-	s := consts.SESSIONNAME
-	d := consts.DBNAME
+	s := consts.SessionName
+	d := consts.DbName
 	c := "user"
 
 	return d, c, s
