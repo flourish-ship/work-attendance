@@ -6,3 +6,7 @@ const (
 	DBNAME      = "mojo-zd"
 	SESSIONNAME = "master"
 )
+
+var (
+	BAD_PARAMS_ERROR = "参数传递错误!"
+)
