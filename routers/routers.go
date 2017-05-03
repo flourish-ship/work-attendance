@@ -1,11 +1,6 @@
 package routers
 
-import (
-	"github.com/flourish-ship/work-attendance/api"
-	"github.com/flourish-ship/work-attendance/render"
-	"github.com/flourish-ship/work-attendance/socket"
-	"github.com/kataras/iris"
-)
+import "github.com/kataras/iris"
 
 func Routers() (frame *iris.Framework) {
 	frame = iris.New()
@@ -23,11 +18,11 @@ func StaticHandler(frame *iris.Framework) {
 }
 
 func RegisterApi(frame *iris.Framework) {
-	userApi := api.UserApi{}
-	chatApi := socket.ChartRoomApi{}
-	homeRender := render.HomeRender{}
-
-	userApi.Register(frame)
-	homeRender.Register(frame)
-	chatApi.Chart(frame)
+	//userApi := api.UserApi{}
+	//chatApi := socket.ChartRoomApi{}
+	//homeRender := render.HomeRender{}
+	//
+	//userApi.Register(frame)
+	//homeRender.Register(frame)
+	//chatApi.Chart(frame)
 }

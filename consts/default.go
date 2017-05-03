@@ -11,9 +11,9 @@ var (
 
 // db info
 var (
-	SessionName string
-	HostName    string
-	DbName      string
-	UserName    string
-	PassWord    string
+	DATABASE_DEFAULT_USER     = "root"
+	DATABASE_DEFAULT_PASSWORD = "root123"
+	DATABASE_DEFAULT_PORT     = "3306"
+	DATABASE_DEFAULT_HOST     = "127.0.0.1"
+	DATABASE_DEFAULT          = "attendence"
 )
