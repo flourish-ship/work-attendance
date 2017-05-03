@@ -1,12 +1,12 @@
-package service
+package migrate
 
 import (
 	"github.com/flourish-ship/work-attendance/database/orm"
 	"github.com/flourish-ship/work-attendance/web/model"
 )
 
-func CreateUser(user *model.User) (err error) {
+func AutoMigrate() {
 	engin := orm.NewOrmEngin()
-	_, err = engin.Insert(user)
-	return
+	engin.CreateTables(model.User{})
+	engin.Sync2(model.User{})
 }
