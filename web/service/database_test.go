@@ -8,6 +8,7 @@ import (
 )
 
 func Test_Insert_User(t *testing.T) {
-	err := CreateUser(&model.User{UserName: "mojo"})
-	utils.Display("error info is ", err)
+	user := &model.User{UserName: "mojozjd"}
+	CreateUser(user)
+	utils.Display("error info is ", user)
 }
