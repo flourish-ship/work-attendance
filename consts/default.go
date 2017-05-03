@@ -11,6 +11,7 @@ var (
 
 // db info
 var (
+	DATA_SOURCE               = "%s:%s@tcp(%s:%s)/%s?charset=utf8"
 	DATABASE_DEFAULT_USER     = "root"
 	DATABASE_DEFAULT_PASSWORD = "root123"
 	DATABASE_DEFAULT_PORT     = "3306"
