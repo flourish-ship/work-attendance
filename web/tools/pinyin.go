@@ -27,3 +27,7 @@ func ToPinYin(value string, args ...interface{}) string {
 
 	return strings.Join(pinyingo.NewPy(style, segment).Convert(value), sep)
 }
+
+func FullPinYin(value string) string {
+	return ToPinYin(value, pinyingo.STYLE_NORMAL)
+}

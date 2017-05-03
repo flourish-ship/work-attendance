@@ -7,6 +7,6 @@ import (
 )
 
 func Test_PinYin(t *testing.T) {
-	str := "Matao"
-	fmt.Println(ToPinYin(str))
+	str := "中国人"
+	fmt.Println(FullPinYin(str))
 }
