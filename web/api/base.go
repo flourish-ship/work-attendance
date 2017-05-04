@@ -3,7 +3,9 @@ package api
 import (
 	"net/http"
 
-	"github.com/kataras/iris"
+	"fmt"
+
+	"gopkg.in/kataras/iris.v6"
 )
 
 //args[0] http code,  args[1] error message
@@ -25,7 +27,8 @@ func ErrorHandler(u *iris.Context, err error, args ...interface{}) bool {
 		code = http.StatusBadRequest
 		message = err.Error()
 	}
-
-	u.Error(message, code)
+	u.EmitError(code)
+	fmt.Println(message)
+	//u.Error(message, code)
 	return true
 }

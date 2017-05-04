@@ -6,8 +6,7 @@ import (
 	"github.com/flourish-ship/work-attendance/web/service"
 
 	//"github.com/flourish-ship/work-attendance/auth"
-
-	"github.com/kataras/iris"
+	"gopkg.in/kataras/iris.v6"
 )
 
 type UserApi struct {
@@ -23,7 +22,7 @@ func (userApi *UserApi) Register(api *iris.Framework) {
 	}
 }
 
-func GetUser(u *iris.Context) {
+func GetUser(ctx *iris.Context) {
 	//u.JSON(iris.StatusOK, user)
 }
 
@@ -42,15 +41,15 @@ func SingIn(u *iris.Context) {
 	//u.Session().Set("authUser", authentication)
 }
 
-func Create(u *iris.Context) {
+func Create(ctx *iris.Context) {
 	user := &model.User{}
-	err := u.ReadJSON(user)
-	if ErrorHandler(u, err) {
+	err := ctx.ReadJSON(user)
+	if ErrorHandler(ctx, err) {
 		return
 	}
 
-	if ErrorHandler(u, service.CreateUser(user)) {
+	if ErrorHandler(ctx, service.CreateUser(user)) {
 		return
 	}
-	u.JSON(iris.StatusOK, user)
+	ctx.JSON(iris.StatusOK, user)
 }
